@@ -1,0 +1,41 @@
+.mat-toolbar {
+  background-color: #FFF;
+  position: relative;
+  color: #212121;
+  border-bottom: lightgray solid 1px;
+}
+
+.mat-tab-nav-bar {
+  display: flexbox;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  border: 0px;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+
+  ::ng-deep .mat-tab-link-container {
+    height: 100%;
+
+    .mat-tab-links {
+      height: 100%;
+    }
+  }
+
+  .mat-tab-link {
+    height: 100%;
+  }
+
+  .mat-tab-label-active {
+    background-color: lightgray;
+  }
+}
+
+::ng-deep .mat-ink-bar {
+  display: none;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

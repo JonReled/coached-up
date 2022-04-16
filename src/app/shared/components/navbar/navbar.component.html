@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <mat-icon>fitness_center</mat-icon>
+  <span>Gym App</span>
+  <span class="example-spacer"></span>
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link 
+      *ngFor="let pageData of pagesData"
+      (click)="changePage(pageData.link)"
+      [active]="activePage === pageData.link"
+    >
+      {{pageData.label}}
+    </a>
+  </nav>
+  <span class="example-spacer"></span>
+  <mat-icon>person</mat-icon>
+</mat-toolbar>
