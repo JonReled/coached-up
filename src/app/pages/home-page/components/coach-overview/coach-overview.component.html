@@ -1,3 +1,28 @@
 <app-wrapper>
-  <p>coach-overview works!</p>
+  <div class="coach-card-header">
+    <img class="coach-profile-picture" src="{{pfpUrl}}" alt="Coach's profile picture">
+    <div class="coach-status-indicator" *ngIf="coachOnlineStatus.isOnline"></div>
+    <div class="coach-card-header-right">
+      <h2 class="coach-card-name">Coach {{coachName}}</h2>
+      <p class="coach-card-status">
+        {{
+          coachOnlineStatus.isOnline
+            ?
+          'Online'
+            :
+          'Last seen ' + (coachOnlineStatus.lastSeen | timestampToTimeAgo)
+        }}
+      </p>
+    </div>
+  </div>
+
+  <div class="coach-card-body">
+    <div class="coach-card-body-row" *ngFor="let notification of notifications">
+      <mat-icon class="{{notification.type}}">{{notification.type}}</mat-icon>
+      <p class="message">{{notification.message}}</p>
+      <p class="timestamp">{{notification.timestamp | timestampToTimeAgo}}</p>
+    </div>
+  </div>
+
+  <button mat-raised-button color="primary">View More</button>
 </app-wrapper>

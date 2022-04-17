@@ -1,0 +1,78 @@
+app-wrapper {
+  width: 300px;
+  height: 100%;
+  display: inline-block;
+
+
+  ::ng-deep .wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .coach-card-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    .coach-profile-picture {
+      object-fit: cover;
+      border-radius: 50%;
+      height: 55px;
+      width: 55px;
+      margin-right: 1rem;
+    }
+
+    .coach-status-indicator {
+      left: 40px;
+      top: 3px;
+      position: absolute;
+      background-color: greenyellow;
+      border: 2px white solid;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+    }
+
+    .coach-card-name {
+      margin: 0;
+    }
+  }
+
+  .coach-card-body {
+    position: relative;
+    margin-top: 2rem;
+
+    &-row {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+
+      mat-icon {
+        border-radius: 50%;
+        margin-right: 0.5rem;
+
+        &.thumb_down {
+          color:red;
+        }
+
+        &.thumb_up {
+          color: green;
+        }
+      }
+
+      .timestamp {
+        position: absolute;
+        right: 0;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .mat-raised-button {
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+  }
+}

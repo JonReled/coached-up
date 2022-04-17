@@ -19,7 +19,9 @@ import { WrapperComponent } from './shared/components/wrapper/wrapper.component'
 import { DietOverviewComponent } from './pages/home-page/components/diet-overview/diet-overview.component';
 import { ProgramOverviewComponent } from './pages/home-page/components/program-overview/program-overview.component';
 import { ProgramWeekViewComponent } from './pages/home-page/components/program-week-view/program-week-view.component';
-import { ProgramDayViewComponent } from './pages/home-page/components/program-week-view/components/program-day-view/program-day-view.component'; 
+import { ProgramDayViewComponent } from './pages/home-page/components/program-week-view/components/program-day-view/program-day-view.component';
+import { MatButtonModule } from '@angular/material/button';
+import { TimestampToTimeAgoPipe } from './shared/pipes/timestamp-to-time-ago.pipe'; 
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { ProgramDayViewComponent } from './pages/home-page/components/program-we
     ProgramOverviewComponent,
     ProgramWeekViewComponent,
     ProgramDayViewComponent,
+    TimestampToTimeAgoPipe,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { ProgramDayViewComponent } from './pages/home-page/components/program-we
     MatIconModule,
     AppRoutingModule,
     MatTabsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
